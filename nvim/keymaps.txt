@@ -1,0 +1,165 @@
+Files Management
+
+:e     -  edit another file
+:w     -  write file
+:wq    -  write file and quit
+:q!    -  quit without saving
+
+------------------------------------------------------------------------------------------------------
+
+Movements
+
+k     - up
+j     - down
+l     - right
+h     - left
+G     - end of buffer
+gg    - beginning of buffer
+^     - beginning of line
+$     - end of line
+{     - one para backward 
+}     - one paragraph forward 
+
+------------------------------------------------------------------------------------------------------
+
+Mode Switching
+
+i     - insert text before the cursor
+I     - insert text from the beginning of the line
+a     - append text after the cursor
+A     - append text at the end of the line
+o     - insert text in a new line below the cursor
+O     - insert text in a new line above the cursor
+
+------------------------------------------------------------------------------------------------------
+
+Cut and Paste
+
+x     - delete character under the cursor
+X     - delete character before the cursor
+dd    - delete line
+D     - delete from the cursor to the end of the line
+p     - paste after the cursor
+P     - paste at the cursor
++p    - paste from system clipboard after cursor
++P    - paste from system clipboard at the cursor
+
+------------------------------------------------------------------------------------------------------
+
+Copy Selection
+
+v     - switch to visual mode
+V     - switch to visual line mode
+y     - copy (yank)
+Y     - copy to system clipboard
+
+------------------------------------------------------------------------------------------------------
+
+Undo Redo
+
+u       - undo
+ctrl+r  - redo
+
+# hard line wrapping 
+
+gq    - wrap selected lines
+
+------------------------------------------------------------------------------------------------------
+
+Searching and Replace
+
+/{pattern}                    - search forward from the cursor
+?{pattern}                    - search backward from cursor
+n                             - next occurrence of search pattern
+N                             - previous occurrence of search pattern
+:%s/{pattern}/{string}/       - replace all matches of a pattern
+:s/{pattern}/{string}         - replace all matches of a pattern in the selected area (visual mode)
+
+------------------------------------------------------------------------------------------------------
+
+Sort
+
+:sort      - sort selected lines
+:sort u    - sort lines, removing dupplicates
+
+------------------------------------------------------------------------------------------------------
+
+Programming
+
+    Go To Variable Definition
+
+    > *    - search for the exact word under the cursor
+    > g*   - same as * but allows partial matches
+    > gd   - goto (local) variable definition
+    > gD   - goto (global) variable definition
+
+    Go To Function Definition
+    
+    > ctrl+]   - search for the tag under the cursor and jump to first match
+    > ctrl+T   - jump back in the tagstack
+    > g]       - search for tag under the cursor and list matches
+    > :ts      - list matches for the last tag seacrh
+    > :tn      - jump to the next matching tag
+    > :tp      - jump to the previous matching tag
+
+------------------------------------------------------------------------------------------------------
+Custom Keymaps
+
+    > <leader>c   - cls search
+
+    > x           - delete without copy
+
+    > <leader>+   - increment
+
+    > <leader>-   - decrement
+
+    > <leader>sv  - split window vertically
+
+    > <leader>sh  - split window horizontally
+
+    > <leader>se  - make split windows equal width & height
+
+    > <leader>sx  - close current split window
+
+    > <leader>tn  - open new tab
+
+    > <leader>tc  - close current tab
+
+    > <leader>tr  - go to next tab
+
+    > <leader>tl  - go to previous tab
+
+------------------------------------------------------------------------------------------------------
+
+Plugins Keymaps
+
+    Telescope
+
+    > <leader>ff  - find files within current working directory, respects .gitignore
+
+    > <leader>fr  - find recent files
+
+    > <leader>fs  - find string in current working directory as you type
+
+    > <leader>fc  - find string under cursor in current working directory
+
+    > <leader>fb  - list open buffers in current neovim instance
+
+    > <leader>fh  - list available help tags
+
+
+    Vim maximizer
+
+    > <leader>sm  - maximize the current split 
+
+    Nvim-tree
+
+    > tt         - open nvim-tree
+
+    TransparentToggle
+
+   > bt          - Transparent background Toggle
+
+------------------------------------------------------------------------------------------------------
+
+
